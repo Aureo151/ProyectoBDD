@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoBDD
 {
-    public partial class Form1 : Form
+    public partial class frmEspacios : Form
     {
-        public Form1()
+        public frmEspacios()
         {
             InitializeComponent();
         }
