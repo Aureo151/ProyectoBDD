@@ -84,21 +84,21 @@
             // sedesToolStripMenuItem
             // 
             this.sedesToolStripMenuItem.Name = "sedesToolStripMenuItem";
-            this.sedesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sedesToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.sedesToolStripMenuItem.Text = "Iniciar Sesión";
             this.sedesToolStripMenuItem.Click += new System.EventHandler(this.sedesToolStripMenuItem_Click);
             // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -115,21 +115,21 @@
             // centrosDeSaludToolStripMenuItem
             // 
             this.centrosDeSaludToolStripMenuItem.Name = "centrosDeSaludToolStripMenuItem";
-            this.centrosDeSaludToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.centrosDeSaludToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.centrosDeSaludToolStripMenuItem.Text = "Centros De Salud";
             this.centrosDeSaludToolStripMenuItem.Click += new System.EventHandler(this.centrosDeSaludToolStripMenuItem_Click);
             // 
             // espaciosToolStripMenuItem
             // 
             this.espaciosToolStripMenuItem.Name = "espaciosToolStripMenuItem";
-            this.espaciosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.espaciosToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.espaciosToolStripMenuItem.Text = "Espacios";
             this.espaciosToolStripMenuItem.Click += new System.EventHandler(this.espaciosToolStripMenuItem_Click);
             // 
             // equiposToolStripMenuItem
             // 
             this.equiposToolStripMenuItem.Name = "equiposToolStripMenuItem";
-            this.equiposToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.equiposToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.equiposToolStripMenuItem.Text = "Equipos";
             this.equiposToolStripMenuItem.Click += new System.EventHandler(this.equiposToolStripMenuItem_Click);
             // 
@@ -138,7 +138,7 @@
             this.asignacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.asignarEnseresYToolStripMenuItem});
             this.asignacionesToolStripMenuItem.Name = "asignacionesToolStripMenuItem";
-            this.asignacionesToolStripMenuItem.Size = new System.Drawing.Size(110, 26);
+            this.asignacionesToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
             this.asignacionesToolStripMenuItem.Text = "Asignaciones";
             // 
             // asignarEnseresYToolStripMenuItem
@@ -152,13 +152,13 @@
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verAsignacionesToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // verAsignacionesToolStripMenuItem
             // 
             this.verAsignacionesToolStripMenuItem.Name = "verAsignacionesToolStripMenuItem";
-            this.verAsignacionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.verAsignacionesToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.verAsignacionesToolStripMenuItem.Text = "Ver Asignaciones";
             // 
             // formPrincipal
