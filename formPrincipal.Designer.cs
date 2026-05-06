@@ -50,7 +50,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 28);
+            this.label1.Location = new System.Drawing.Point(0, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(606, 27);
             this.label1.TabIndex = 0;
@@ -66,7 +66,7 @@
             this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -115,21 +115,21 @@
             // centrosDeSaludToolStripMenuItem
             // 
             this.centrosDeSaludToolStripMenuItem.Name = "centrosDeSaludToolStripMenuItem";
-            this.centrosDeSaludToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.centrosDeSaludToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.centrosDeSaludToolStripMenuItem.Text = "Centros De Salud";
             this.centrosDeSaludToolStripMenuItem.Click += new System.EventHandler(this.centrosDeSaludToolStripMenuItem_Click);
             // 
             // espaciosToolStripMenuItem
             // 
             this.espaciosToolStripMenuItem.Name = "espaciosToolStripMenuItem";
-            this.espaciosToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.espaciosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.espaciosToolStripMenuItem.Text = "Espacios";
             this.espaciosToolStripMenuItem.Click += new System.EventHandler(this.espaciosToolStripMenuItem_Click);
             // 
             // equiposToolStripMenuItem
             // 
             this.equiposToolStripMenuItem.Name = "equiposToolStripMenuItem";
-            this.equiposToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.equiposToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.equiposToolStripMenuItem.Text = "Equipos";
             this.equiposToolStripMenuItem.Click += new System.EventHandler(this.equiposToolStripMenuItem_Click);
             // 
