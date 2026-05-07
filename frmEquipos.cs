@@ -32,7 +32,7 @@ namespace ProyectoBDD
 
                 using (SqlConnection conn = cn.ObtenerConexion())
                 {
-                    string query = @"SELECT id_equipo, nombre, marca, estado, modelo
+                    string query = @"SELECT id_equipo, nombre, marca, estado, modelo,numero_serie
                          FROM EQUIPO
                          WHERE codigo_equipo = @codigo";
 
@@ -47,6 +47,7 @@ namespace ProyectoBDD
                         {
                             if (reader.Read())
                             {
+                                textBox1.Text = reader["numero_serie"].ToString();
                                 textBox2.Text = reader["nombre"].ToString();
                                 textBox3.Text = reader["marca"].ToString();
                                 textBox4.Text = reader["estado"].ToString();
@@ -55,7 +56,7 @@ namespace ProyectoBDD
                             else
                             {
                                 MessageBox.Show("Equipo no encontrado.");
-
+                                textBox1.Clear();
                                 textBox2.Clear();
                                 textBox3.Clear();
                                 textBox4.Clear();
