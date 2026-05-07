@@ -16,5 +16,11 @@ namespace ProyectoBDD
         {
             InitializeComponent();
         }
+
+        private void centroSaludToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCentroSalud frmCentroSalud = new frmCentroSalud();
+            frmCentroSalud.ShowDialog();
+        }
     }
 }
