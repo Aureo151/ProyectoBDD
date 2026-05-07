@@ -61,9 +61,7 @@ namespace ProyectoBDD
                                 textBox3.Clear();
                                 textBox4.Clear();
                             }
-                            DataTable dataTable = new DataTable();
-                            dataTable.Load(reader);
-                            dataGridView1.DataSource = dataTable;
+                           
                         }
                     }
                 }
@@ -116,13 +114,26 @@ namespace ProyectoBDD
                                 "Nuevo Equipo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
+                mostrarEquipos();
 
-                
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+        private void mostrarEquipos()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM EQUIPO", new Conexion().ObtenerConexion());
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+        }
+
+        private void frmEquipos_Load(object sender, EventArgs e)
+        {
+            mostrarEquipos();
         }
     }
 }
