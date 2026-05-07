@@ -22,5 +22,16 @@ namespace ProyectoBDD
             frmCentroSalud frmCentroSalud = new frmCentroSalud();
             frmCentroSalud.ShowDialog();
         }
+
+        private void mantenimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void equiposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEquipos frmEquipos = new frmEquipos();
+            frmEquipos.ShowDialog();
+        }
     }
 }
