@@ -82,13 +82,16 @@ namespace ProyectoBDD
 
                 using (SqlConnection connection = cn.ObtenerConexion())
                 {
-                    string sql = @"INSERT INTO Equipo
+                    string sql = @"INSERT INTO EQUIPO
                        (codigo_equipo ,nombre, marca, modelo, numero_serie, estado)
                        VALUES
-                       (@nombre, @marca, @modelo, @numero_serie, @codigo_equipo, @estado)";
+                       (@codigo_equipo, @nombre, @marca, @modelo, @numero_serie, @estado)";
 
                     using (SqlCommand comando = new SqlCommand(sql, connection))
                     {
+                        comando.Parameters.Add("@codigo_equipo", SqlDbType.VarChar).Value =
+                            txtCodigo.Text.Trim();
+
                         comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value =
                             textBox2.Text.Trim();
 
@@ -101,14 +104,7 @@ namespace ProyectoBDD
                         comando.Parameters.Add("@numero_serie", SqlDbType.VarChar).Value =
                             textBox1.Text.Trim();
 
-                        comando.Parameters.Add("@codigo_equipo", SqlDbType.VarChar).Value =
-                            txtCodigo.Text.Trim();
-                        
-
-
-                       
-
-                        comando.Parameters.Add("@estado", SqlDbType.Bit).Value =
+                        comando.Parameters.Add("@estado", SqlDbType.VarChar).Value =
                             textBox4.Text.Trim();
 
                         connection.Open();
@@ -116,8 +112,8 @@ namespace ProyectoBDD
                     }
                 }
 
-                MessageBox.Show("Actor registrado correctamente.",
-                                "Nuevo Actor",
+                MessageBox.Show("Equipo registrado correctamente.",
+                                "Nuevo Equipo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
 
