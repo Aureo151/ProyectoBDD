@@ -73,5 +73,60 @@ namespace ProyectoBDD
                 MessageBox.Show("Error al buscar el equipo: " + ex.Message);
             }
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Conexion cn = new Conexion();
+
+                using (SqlConnection connection = cn.ObtenerConexion())
+                {
+                    string sql = @"INSERT INTO Equipo
+                       (codigo_equipo ,nombre, marca, modelo, numero_serie, estado)
+                       VALUES
+                       (@nombre, @marca, @modelo, @numero_serie, @codigo_equipo, @estado)";
+
+                    using (SqlCommand comando = new SqlCommand(sql, connection))
+                    {
+                        comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value =
+                            textBox2.Text.Trim();
+
+                        comando.Parameters.Add("@marca", SqlDbType.VarChar).Value =
+                            textBox3.Text.Trim();
+
+                        comando.Parameters.Add("@modelo", SqlDbType.VarChar).Value =
+                            textBox5.Text.Trim();
+
+                        comando.Parameters.Add("@numero_serie", SqlDbType.VarChar).Value =
+                            textBox1.Text.Trim();
+
+                        comando.Parameters.Add("@codigo_equipo", SqlDbType.VarChar).Value =
+                            txtCodigo.Text.Trim();
+                        
+
+
+                       
+
+                        comando.Parameters.Add("@estado", SqlDbType.Bit).Value =
+                            textBox4.Text.Trim();
+
+                        connection.Open();
+                        comando.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show("Actor registrado correctamente.",
+                                "Nuevo Actor",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 }
