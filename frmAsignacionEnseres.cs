@@ -35,9 +35,9 @@ namespace ProyectoBDD
 
                 da.Fill(dt);
 
-                comboBox2.DataSource = dt;
-                comboBox2.DisplayMember = "nombre";
-                comboBox2.ValueMember = "id_espacio";
+                cmbEspacio.DataSource = dt;
+                cmbEspacio.DisplayMember = "nombre";
+                cmbEspacio.ValueMember = "id_espacio";
             }
         }
 
@@ -79,27 +79,27 @@ namespace ProyectoBDD
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value =
-                            textBox1.Text.Trim();
+                            txtCodigoEquipo.Text.Trim();
 
                         cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value =
-                            textBox2.Text.Trim();
+                            txtNombre.Text.Trim();
 
                         cmd.Parameters.Add("@marca", SqlDbType.VarChar).Value =
-                            textBox3.Text.Trim();
+                            txtMarca.Text.Trim();
 
                         cmd.Parameters.Add("@modelo", SqlDbType.VarChar).Value =
-                            textBox4.Text.Trim();
+                            txtModelo.Text.Trim();
 
                         cmd.Parameters.Add("@serie", SqlDbType.VarChar).Value =
-                            textBox5.Text.Trim();
+                            txtNumero.Text.Trim();
 
 
                         cmd.Parameters.Add("@id_espacio", SqlDbType.Int).Value =
-                            comboBox2.SelectedValue;
+                            cmbEspacio.SelectedValue;
 
 
                         cmd.Parameters.Add("@estado", SqlDbType.VarChar).Value =
-                            textBox6.Text.Trim();
+                            txtEstado.Text.Trim();
 
                         conn.Open();
 
@@ -108,7 +108,7 @@ namespace ProyectoBDD
 
                         string sqlEspacio = "";
 
-                        switch (comboBox2.Text)
+                        switch (cmbEspacio.Text)
                         {
                             case "Laboratorio":
 
@@ -141,7 +141,7 @@ namespace ProyectoBDD
                             using (SqlCommand cmd2 = new SqlCommand(sqlEspacio, conn))
                             {
                                 cmd2.Parameters.Add("@nombre", SqlDbType.VarChar).Value =
-                                    textBox2.Text.Trim();
+                                    txtNombre.Text.Trim();
 
                                 cmd2.ExecuteNonQuery();
                             }
@@ -166,12 +166,12 @@ namespace ProyectoBDD
 
        private void Limpiar()
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            comboBox2.SelectedIndex = -1;
+            txtCodigoEquipo.Clear();
+            txtNombre.Clear();
+            txtMarca.Clear();
+            txtModelo.Clear();
+            txtNumero.Clear();
+            cmbEspacio.SelectedIndex = -1;
         }
 
 
