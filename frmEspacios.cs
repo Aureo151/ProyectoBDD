@@ -55,7 +55,7 @@ namespace ProyectoBDD
                 Conexion cn = new Conexion();
                 using (SqlConnection conexion = cn.ObtenerConexion())
                 {
-                    string sql = "SELECT e.id_espacio, e.nombre, c.nombre AS centro FROM ESPACIO e JOIN CENTRO_SALUD c ON e.id_centro = c.id_centro";
+                    string sql = "SELECT e.id_espacio, e.nombre, e.tipo, c.nombre AS centro FROM ESPACIO e JOIN CENTRO_SALUD c ON e.id_centro = c.id_centro";
                     using (SqlDataAdapter adapter = new SqlDataAdapter(sql, conexion))
                     {
                         DataTable dataTable = new DataTable();
@@ -292,6 +292,49 @@ namespace ProyectoBDD
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar el espacio: " + ex.Message);
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(string.IsNullOrEmpty(txtNombreBuscar.Text.Trim()))
+                {
+                    MessageBox.Show("Ingrese un nombre para actualizar.");
+                    return;
+                }
+
+                Conexion cn = new Conexion();
+
+                using(SqlConnection conexion = cn.ObtenerConexion())
+                {
+                    string sql = "UPDATE ESPACIO SET nombre = @nombre, tipo = @tipo, id_centro = @id_centro WHERE nombre = @nombre_buscar";
+                    using (SqlCommand cmd = new SqlCommand(sql, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@nombre", txtNombre.Text.Trim());
+                        cmd.Parameters.AddWithValue("@tipo", cmbTipo.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@id_centro", Convert.ToInt32(cmbCentro.SelectedValue));
+                        cmd.Parameters.AddWithValue("@nombre_buscar", txtNombreBuscar.Text.Trim());
+                        cmd.Parameters.AddWithValue("@id_espacio", Convert.ToInt32(txtID.Text));
+                        conexion.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Espacio actualizado correctamente.");
+                            mostrarEspacios();
+                            LimpiarCampos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontró el espacio para actualizar.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
     }

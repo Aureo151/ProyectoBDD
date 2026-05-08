@@ -153,5 +153,48 @@ namespace ProyectoBDD
                 MessageBox.Show("Error al eliminar el centro: " + ex.Message);
             }
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(string.IsNullOrEmpty(txtNombreBuscar.Text.Trim()))
+                {
+                    MessageBox.Show("Ingrese el nombre del centro a actualizar");
+                    return;
+                }
+
+                Conexion cn = new Conexion();
+
+                using(SqlConnection connection = cn.ObtenerConexion())
+                {
+                    string sql = @"UPDATE CENTRO_SALUD SET nombre = @nombre, direccion = @direccion, 
+                    telefono = @telefono WHERE nombre = @nombreBuscar";
+                    using (SqlCommand comando = new SqlCommand(sql, connection))
+                    {
+                        comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = txtNombre.Text.Trim();
+                        comando.Parameters.Add("@direccion", SqlDbType.VarChar).Value = txtDireccion.Text.Trim();
+                        comando.Parameters.Add("@telefono", SqlDbType.VarChar).Value = txtTelefono.Text.Trim();
+                        comando.Parameters.Add("@nombreBuscar", SqlDbType.VarChar).Value = txtNombreBuscar.Text.Trim();
+                        connection.Open();
+                        int rowsAffected = comando.ExecuteNonQuery();
+                        if(rowsAffected > 0)
+                        {
+                            MessageBox.Show("Centro de salud actualizado exitosamente", "Actualizar Centro de Salud",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            mostrarCentros();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontró el centro para actualizar");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar el centro: " + ex.Message);
+            }
+        }
     }
 }

@@ -47,19 +47,19 @@ namespace ProyectoBDD
                         {
                             if (reader.Read())
                             {
-                                textBox1.Text = reader["numero_serie"].ToString();
-                                textBox2.Text = reader["nombre"].ToString();
-                                textBox3.Text = reader["marca"].ToString();
-                                textBox4.Text = reader["estado"].ToString();
-                                textBox5.Text = reader["modelo"].ToString();
+                                txtNoSerie.Text = reader["numero_serie"].ToString();
+                                txtNombre.Text = reader["nombre"].ToString();
+                                txtMarca.Text = reader["marca"].ToString();
+                                txtEstado.Text = reader["estado"].ToString();
+                                txtModelo.Text = reader["modelo"].ToString();
                             }
                             else
                             {
                                 MessageBox.Show("Equipo no encontrado.");
-                                textBox1.Clear();
-                                textBox2.Clear();
-                                textBox3.Clear();
-                                textBox4.Clear();
+                                txtNoSerie.Clear();
+                                txtNombre.Clear();
+                                txtMarca.Clear();
+                                txtEstado.Clear();
                             }
                            
                         }
@@ -91,19 +91,19 @@ namespace ProyectoBDD
                             txtCodigo.Text.Trim();
 
                         comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value =
-                            textBox2.Text.Trim();
+                            txtNombre.Text.Trim();
 
                         comando.Parameters.Add("@marca", SqlDbType.VarChar).Value =
-                            textBox3.Text.Trim();
+                            txtMarca.Text.Trim();
 
                         comando.Parameters.Add("@modelo", SqlDbType.VarChar).Value =
-                            textBox5.Text.Trim();
+                            txtModelo.Text.Trim();
 
                         comando.Parameters.Add("@numero_serie", SqlDbType.VarChar).Value =
-                            textBox1.Text.Trim();
+                            txtNoSerie.Text.Trim();
 
                         comando.Parameters.Add("@estado", SqlDbType.VarChar).Value =
-                            textBox4.Text.Trim();
+                            txtEstado.Text.Trim();
 
                         connection.Open();
                         comando.ExecuteNonQuery();
@@ -171,6 +171,61 @@ namespace ProyectoBDD
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar el equipo: " + ex.Message);
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(string.IsNullOrWhiteSpace(txtCodigo.Text))
+                {
+                    MessageBox.Show("Ingrese el codigo del equipo a actualizar.");
+                    return;
+                }
+
+                Conexion cn = new Conexion();
+
+                using(SqlConnection connection = cn.ObtenerConexion())
+                {
+                    string sql = @"UPDATE EQUIPO
+                                   SET nombre = @nombre,
+                                       marca = @marca,
+                                       modelo = @modelo,
+                                       numero_serie = @numero_serie,
+                                       estado = @estado
+                                   WHERE codigo_equipo = @codigo";
+                    using (SqlCommand comando = new SqlCommand(sql, connection))
+                    {
+                        comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value =
+                            txtCodigo.Text.Trim();
+                        comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value =
+                            txtNombre.Text.Trim();
+                        comando.Parameters.Add("@marca", SqlDbType.VarChar).Value =
+                            txtMarca.Text.Trim();
+                        comando.Parameters.Add("@modelo", SqlDbType.VarChar).Value =
+                            txtModelo.Text.Trim();
+                        comando.Parameters.Add("@numero_serie", SqlDbType.VarChar).Value =
+                            txtNoSerie.Text.Trim();
+                        comando.Parameters.Add("@estado", SqlDbType.VarChar).Value =
+                            txtEstado.Text.Trim();
+                        connection.Open();
+                        int rowsAffected = comando.ExecuteNonQuery();
+                        if(rowsAffected > 0)
+                        {
+                            MessageBox.Show("Equipo actualizado correctamente.");
+                            mostrarEquipos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontró el equipo para actualizar.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar el equipo: " + ex.Message);
             }
         }
     }
