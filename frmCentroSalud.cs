@@ -111,5 +111,47 @@ namespace ProyectoBDD
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtNombreBuscar.Text.Trim() == "")
+                {
+                    MessageBox.Show("Ingrese el nombre del centro a eliminar");
+                    return;
+                }
+
+                DialogResult result = MessageBox.Show("¿Está seguro de eliminar el centro de salud?", "Confirmar eliminación",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    Conexion cn = new Conexion();
+                    using (SqlConnection connection = cn.ObtenerConexion())
+                    {
+                        string sql = @"DELETE FROM CENTRO_SALUD WHERE nombre = @nombre";
+                        using (SqlCommand comando = new SqlCommand(sql, connection))
+                        {
+                            comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = txtNombreBuscar.Text.Trim();
+                            connection.Open();
+                            int rowsAffected = comando.ExecuteNonQuery();
+                            
+                            MessageBox.Show("Centro de salud eliminado exitosamente", "Eliminar Centro de Salud",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            mostrarCentros();
+                            txtNombreBuscar.Clear();
+                            txtNombre.Clear();
+                            txtDireccion.Clear();
+                            txtTelefono.Clear();                         
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el centro: " + ex.Message);
+            }
+        }
     }
 }

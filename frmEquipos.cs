@@ -135,5 +135,43 @@ namespace ProyectoBDD
         {
             mostrarEquipos();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtCodigo.Text))
+                {
+                    MessageBox.Show("Ingrese el codigo del equipo a eliminar.");
+                    return;
+                }
+
+                DialogResult result = MessageBox.Show("¿Está seguro de eliminar el equipo?", "Confirmar eliminación",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if(result == DialogResult.Yes)
+                {
+                    Conexion cn = new Conexion();
+                    using (SqlConnection connection = cn.ObtenerConexion())
+                    {
+                        string sql = @"DELETE FROM EQUIPO WHERE codigo_equipo = @codigo";
+                        using (SqlCommand comando = new SqlCommand(sql, connection))
+                        {
+                            comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value =
+                            txtCodigo.Text.Trim();
+                            connection.Open();
+                            int rowsAffected = comando.ExecuteNonQuery();                      
+                            MessageBox.Show("Equipo eliminado correctamente.");
+                            mostrarEquipos();
+                            
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el equipo: " + ex.Message);
+            }
+        }
     }
 }
