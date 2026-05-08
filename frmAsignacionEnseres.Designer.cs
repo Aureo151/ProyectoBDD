@@ -45,6 +45,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cmbEspacio = new System.Windows.Forms.ComboBox();
             this.btnAsignar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -95,7 +96,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(234, 38);
+            this.label6.Location = new System.Drawing.Point(172, 301);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 16);
             this.label6.TabIndex = 5;
@@ -104,7 +105,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(238, 112);
+            this.label7.Location = new System.Drawing.Point(176, 375);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 16);
             this.label7.TabIndex = 6;
@@ -149,14 +150,14 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(241, 75);
+            this.txtNumero.Location = new System.Drawing.Point(179, 338);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 22);
             this.txtNumero.TabIndex = 12;
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(237, 145);
+            this.txtEstado.Location = new System.Drawing.Point(175, 408);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(100, 22);
             this.txtEstado.TabIndex = 13;
@@ -180,7 +181,7 @@
             // 
             // btnAsignar
             // 
-            this.btnAsignar.Location = new System.Drawing.Point(520, 216);
+            this.btnAsignar.Location = new System.Drawing.Point(534, 145);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(98, 38);
             this.btnAsignar.TabIndex = 16;
@@ -188,11 +189,22 @@
             this.btnAsignar.UseVisualStyleBackColor = true;
             this.btnAsignar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(179, 68);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(115, 29);
+            this.btnBuscar.TabIndex = 17;
+            this.btnBuscar.Text = "Buscar Equipo";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmAsignacionEnseres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnAsignar);
             this.Controls.Add(this.cmbEspacio);
             this.Controls.Add(this.label8);
@@ -237,5 +249,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbEspacio;
         private System.Windows.Forms.Button btnAsignar;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

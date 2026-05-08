@@ -53,28 +53,20 @@ namespace ProyectoBDD
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtCodigoEquipo.Text.Trim()))
+                {
+                    MessageBox.Show("Complete el campo del codigo de quipo a asignar.");
+                    return;
+                }
+                if (cmbEspacio.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Seleccione un espacio para asignar el equipo.");
+                    return;
+                }
                 using (SqlConnection conn = con.ObtenerConexion())
                 {
-                    string query = @"INSERT INTO EQUIPO
-                    (
-                        codigo_equipo,
-                        nombre,
-                        marca,
-                        modelo,
-                        numero_serie,
-                        estado,
-                        id_espacio
-                    )
-                    VALUES
-                    (
-                        @codigo,
-                        @nombre,
-                        @marca,
-                        @modelo,
-                        @serie,
-                        @estado,
-                        @id_espacio
-                    )";
+                    string query = @"UPDATE EQUIPO SET nombre = @nombre, marca = @marca, modelo = @modelo, numero_serie = @serie, id_espacio = @id_espacio, estado = @estado
+                         WHERE codigo_equipo = @codigo";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -103,54 +95,23 @@ namespace ProyectoBDD
 
                         conn.Open();
 
-                        cmd.ExecuteNonQuery();
+                        int filas = cmd.ExecuteNonQuery();
 
-
-                        string sqlEspacio = "";
-
-                        switch (cmbEspacio.Text)
+                        if (filas > 0)
                         {
-                            case "Laboratorio":
-
-                                sqlEspacio = @"INSERT INTO LABORATORIO(nombre)
-                           VALUES(@nombre)";
-                                break;
-
-                            case "Oficina":
-
-                                sqlEspacio = @"INSERT INTO OFICINAS(nombre)
-                           VALUES(@nombre)";
-                                break;
-
-                            case "Consultorio":
-
-                                sqlEspacio = @"INSERT INTO CONSULTORIO(nombre)
-                           VALUES(@nombre)";
-                                break;
-
-                            case "Emergencia":
-
-                                sqlEspacio = @"INSERT INTO SALA_EMERGENCIA(nombre)
-                           VALUES(@nombre)";
-                                break;
-                        }
-
-                        
-                        if (sqlEspacio != "")
-                        {
-                            using (SqlCommand cmd2 = new SqlCommand(sqlEspacio, conn))
-                            {
-                                cmd2.Parameters.Add("@nombre", SqlDbType.VarChar).Value =
-                                    txtNombre.Text.Trim();
-
-                                cmd2.ExecuteNonQuery();
-                            }
-                            Limpiar();
-                        }
-                        MessageBox.Show("Equipo registrado correctamente.",
+                            MessageBox.Show("Equipo registrado correctamente.",
                                         "Registro",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
+                            Limpiar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo registrar el equipo. Verifique el código.",
+                                        "Error",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -170,12 +131,50 @@ namespace ProyectoBDD
             cmbEspacio.SelectedIndex = -1;
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(string.IsNullOrWhiteSpace(txtCodigoEquipo.Text))
+                {
+                    MessageBox.Show("Ingrese un código.");
+                    return;
+                }
 
-
-
-
-
-
+                using (SqlConnection conn = con.ObtenerConexion())
+                {
+                    string query = @"SELECT id_equipo, nombre, marca, estado, modelo,numero_serie
+                         FROM EQUIPO
+                         WHERE codigo_equipo = @codigo";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value =
+                            txtCodigoEquipo.Text.Trim();
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                txtNumero.Text = reader["numero_serie"].ToString();
+                                txtNombre.Text = reader["nombre"].ToString();
+                                txtMarca.Text = reader["marca"].ToString();
+                                txtEstado.Text = reader["estado"].ToString();
+                                txtModelo.Text = reader["modelo"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Equipo no encontrado.");
+                                Limpiar();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el equipo: " + ex.Message);
+            }
+        }
     }
 }
 
