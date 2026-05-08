@@ -145,16 +145,12 @@ namespace ProyectoBDD
 
                                 cmd2.ExecuteNonQuery();
                             }
-
-
-                            MessageBox.Show("Equipo registrado correctamente.",
+                            Limpiar();
+                        }
+                        MessageBox.Show("Equipo registrado correctamente.",
                                         "Registro",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
-
-                            Limpiar();
-                        }
-
                     }
                 }
             }
