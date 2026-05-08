@@ -146,6 +146,7 @@
             this.asignarEnseresYToolStripMenuItem.Name = "asignarEnseresYToolStripMenuItem";
             this.asignarEnseresYToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.asignarEnseresYToolStripMenuItem.Text = "Asignar Enseres a Equipos";
+            this.asignarEnseresYToolStripMenuItem.Click += new System.EventHandler(this.asignarEnseresYToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 

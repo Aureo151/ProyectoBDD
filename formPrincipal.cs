@@ -56,5 +56,11 @@ namespace ProyectoBDD
             frmEquipos frmEquipos = new frmEquipos();
             frmEquipos.ShowDialog();
         }
+
+        private void asignarEnseresYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAsignacionEnseres df = new frmAsignacionEnseres();
+            df.ShowDialog();
+        }
     }
 }

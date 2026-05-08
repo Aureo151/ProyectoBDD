@@ -65,6 +65,12 @@
     <Compile Include="formPrincipal.Designer.cs">
       <DependentUpon>formPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAsignacionEnseres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignacionEnseres.Designer.cs">
+      <DependentUpon>frmAsignacionEnseres.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCentroSalud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formPrincipal.resx">
       <DependentUpon>formPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignacionEnseres.resx">
+      <DependentUpon>frmAsignacionEnseres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCentroSalud.resx">
       <DependentUpon>frmCentroSalud.cs</DependentUpon>
