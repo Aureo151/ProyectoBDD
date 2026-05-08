@@ -33,5 +33,17 @@ namespace ProyectoBDD
             frmEquipos frmEquipos = new frmEquipos();
             frmEquipos.ShowDialog();
         }
+
+        private void espaciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEspacios frmEspacios = new frmEspacios();
+            frmEspacios.ShowDialog();
+        }
+
+        private void asignacionDeEnseresYEquiposAEspaciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAsignacionEnseres frmAsignacionEnseres = new frmAsignacionEnseres();
+            frmAsignacionEnseres.ShowDialog();
+        }
     }
 }
