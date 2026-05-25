@@ -62,5 +62,32 @@ namespace ProyectoBDD
             frmAsignacionEnseres df = new frmAsignacionEnseres();
             df.ShowDialog();
         }
+
+        private void verAsignacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           frmRegistros fg = new frmRegistros();
+            fg.ShowDialog();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
     }
 }
