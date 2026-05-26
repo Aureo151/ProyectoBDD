@@ -27,78 +27,7 @@ namespace ProyectoBDD
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (SqlConnection conn = con.ObtenerConexion())
-                {
-                    string query = @"SELECT 
-                            id_equipo,
-                            codigo_equipo,
-                            nombre,
-                            marca,
-                            estado,
-                            modelo,
-                            numero_serie
-                         FROM EQUIPO";
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        DataTable dt = new DataTable();
-
-                        da.Fill(dt);
-
-                        dataGridView1.DataSource = dt;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al mostrar los registros: " + ex.Message);
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                using (SqlConnection conn = con.ObtenerConexion())
-                {
-                    
-                    string query = @"
-            SELECT 
-                M.id_mantenimiento_equipo,
-                M.fecha,
-                M.responsable,
-                M.id_equipo,
-                E.codigo_equipo,
-                E.nombre,
-                E.marca,
-                E.modelo,
-                E.numero_serie,
-                E.estado,
-                E.id_espacio,
-                E.id_tipo
-            FROM MANTENIMIENTO_EQUIPO M
-            INNER JOIN EQUIPO E 
-                ON M.id_equipo = E.id_equipo";
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        DataTable dt = new DataTable();
-
-                        da.Fill(dt);
-
-                        
-                        dataGridView1.DataSource = dt;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al mostrar el mantenimiento de equipos: " + ex.Message);
-            }
+           
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -113,10 +42,10 @@ namespace ProyectoBDD
                 ME.id_mantenimiento_espacio,
                 ME.fecha,
                 ME.responsable,
-                ME.id_espacio,
+                
                 E.nombre,
-                E.tipo,
-                E.id_centro
+                E.tipo
+                
             FROM MANTENIMIENTO_ESPACIO ME
             INNER JOIN ESPACIO E 
                 ON ME.id_espacio = E.id_espacio";
@@ -136,6 +65,18 @@ namespace ProyectoBDD
             catch (Exception ex)
             {
                 MessageBox.Show("Error al mostrar el mantenimiento de espacios: " + ex.Message);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Opción A: Desvincular por completo (deja el DataGridView totalmente en blanco)
+            dataGridView1.DataSource = null;
+
+            // Opción B: Si quieres conservar los nombres de las columnas (cabeceras) pero vaciar las filas
+            if (dataGridView1.DataSource is DataTable dt)
+            {
+                dt.Clear();
             }
         }
     }
