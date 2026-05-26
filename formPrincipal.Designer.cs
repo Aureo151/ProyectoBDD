@@ -42,6 +42,7 @@
             this.asignarEnseresYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verAsignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarIncidenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 30);
+            this.label1.Location = new System.Drawing.Point(0, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(606, 27);
             this.label1.TabIndex = 0;
@@ -66,7 +67,7 @@
             this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -136,7 +137,8 @@
             // asignacionesToolStripMenuItem
             // 
             this.asignacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asignarEnseresYToolStripMenuItem});
+            this.asignarEnseresYToolStripMenuItem,
+            this.asignarIncidenciasToolStripMenuItem});
             this.asignacionesToolStripMenuItem.Name = "asignacionesToolStripMenuItem";
             this.asignacionesToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
             this.asignacionesToolStripMenuItem.Text = "Asignaciones";
@@ -159,9 +161,16 @@
             // verAsignacionesToolStripMenuItem
             // 
             this.verAsignacionesToolStripMenuItem.Name = "verAsignacionesToolStripMenuItem";
-            this.verAsignacionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.verAsignacionesToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.verAsignacionesToolStripMenuItem.Text = "Ver Asignaciones";
             this.verAsignacionesToolStripMenuItem.Click += new System.EventHandler(this.verAsignacionesToolStripMenuItem_Click);
+            // 
+            // asignarIncidenciasToolStripMenuItem
+            // 
+            this.asignarIncidenciasToolStripMenuItem.Name = "asignarIncidenciasToolStripMenuItem";
+            this.asignarIncidenciasToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.asignarIncidenciasToolStripMenuItem.Text = "Asignar Incidencias";
+            this.asignarIncidenciasToolStripMenuItem.Click += new System.EventHandler(this.asignarIncidenciasToolStripMenuItem_Click);
             // 
             // formPrincipal
             // 
@@ -195,6 +204,7 @@
         private System.Windows.Forms.ToolStripMenuItem asignarEnseresYToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verAsignacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignarIncidenciasToolStripMenuItem;
     }
 }
 

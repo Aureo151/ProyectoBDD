@@ -58,17 +58,14 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(849, 134);
+            this.button3.Location = new System.Drawing.Point(0, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 59);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Registro mantenimientos de Equipos";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 6;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(849, 224);
+            this.button5.Location = new System.Drawing.Point(849, 128);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(136, 59);
             this.button5.TabIndex = 4;

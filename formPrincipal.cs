@@ -89,5 +89,11 @@ namespace ProyectoBDD
 
 
         }
+
+        private void asignarIncidenciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroIncidencias lñ = new frmRegistroIncidencias();
+            lñ.ShowDialog();
+        }
     }
 }
