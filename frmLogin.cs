@@ -39,18 +39,9 @@ namespace ProyectoBDD
             {
                 int rol = Convert.ToInt32(dr["id_rol"]);
 
-                if (rol == 1)
-                {
-                    FormAdministrador f = new FormAdministrador();
-                    f.Show();
-                }
-                else if (rol == 2)
-                {
-                    FormDigitador f = new FormDigitador();
-                    f.Show();
-                }
-
-
+                FormAdministrador adminForm = new FormAdministrador(rol);
+                adminForm.Show();
+                this.Hide();
             }
             else
             {

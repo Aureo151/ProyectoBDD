@@ -26,7 +26,8 @@ namespace ProyectoBDD
         {
             frmLogin frmLogin = new frmLogin();
             frmLogin.ShowDialog();
-            
+            this.Hide();
+
         }
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,8 +72,8 @@ namespace ProyectoBDD
 
         private void asignarIncidenciasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRegistroIncidencias lñ = new frmRegistroIncidencias();
-            lñ.ShowDialog();
+            frmRegistroIncidencias fi = new frmRegistroIncidencias();
+            fi.ShowDialog();
         }
 
         private void asignarIncidenciasDeEquipoToolStripMenuItem_Click(object sender, EventArgs e)

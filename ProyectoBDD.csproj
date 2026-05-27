@@ -53,12 +53,6 @@
     <Compile Include="FormAdministrador.Designer.cs">
       <DependentUpon>FormAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDigitador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDigitador.Designer.cs">
-      <DependentUpon>FormDigitador.cs</DependentUpon>
-    </Compile>
     <Compile Include="formPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +64,12 @@
     </Compile>
     <Compile Include="frmAsignacionEnseres.Designer.cs">
       <DependentUpon>frmAsignacionEnseres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsignacionPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignacionPersonas.Designer.cs">
+      <DependentUpon>frmAsignacionPersonas.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCentroSalud.cs">
       <SubType>Form</SubType>
@@ -101,6 +101,18 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMantenimientoEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantenimientoEquipos.Designer.cs">
+      <DependentUpon>frmMantenimientoEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantenimientoSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantenimientoSala.Designer.cs">
+      <DependentUpon>frmMantenimientoSala.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistroIncidencias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,13 +131,16 @@
     <Compile Include="frmRegistros.Designer.cs">
       <DependentUpon>frmRegistros.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAdministrador.resx">
       <DependentUpon>FormAdministrador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDigitador.resx">
-      <DependentUpon>FormDigitador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formPrincipal.resx">
       <DependentUpon>formPrincipal.cs</DependentUpon>

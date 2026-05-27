@@ -12,11 +12,56 @@ namespace ProyectoBDD
 {
     public partial class FormAdministrador : Form
     {
-        public FormAdministrador()
+        int rolUsuario;
+        public FormAdministrador(int rol)
         {
             InitializeComponent();
+            rolUsuario = rol;
+            ConfigurarMenuPorRol();
         }
+        private void ConfigurarMenuPorRol()
+        {
+            mantenimientosToolStripMenuItem.Visible = false;
+            asignacionToolStripMenuItem.Visible = false;
+            incidenciasToolStripMenuItem.Visible = false;
+            reportesToolStripMenuItem.Visible = false;
+            mantenimientosTecnicosToolStripMenuItem.Visible = false;
+            sistemaToolStripMenuItem.Visible = true;
 
+            if (rolUsuario == 1) // Administrador
+            {
+                // Mostrar todas las opciones
+                mantenimientosToolStripMenuItem.Visible = true;
+                asignacionToolStripMenuItem.Visible = true;
+                incidenciasToolStripMenuItem.Visible = true;
+                reportesToolStripMenuItem.Visible = true;
+                mantenimientosTecnicosToolStripMenuItem.Visible = true;
+                sistemaToolStripMenuItem.Visible = true;
+            }
+            else if (rolUsuario == 2) // Usuario
+            {
+                // Mostrar solo opciones de usuario
+                mantenimientosToolStripMenuItem.Visible = true;
+                asignacionToolStripMenuItem.Visible = true;
+            }
+            else if(rolUsuario == 1002) //Jefe enfermeras
+            {
+                incidenciasToolStripMenuItem.Visible = true;
+            }
+            else if(rolUsuario == 1003) //Director Centro
+            {
+                mantenimientosTecnicosToolStripMenuItem.Visible = true;
+                asignacionToolStripMenuItem.Visible = true;
+            }
+            else if(rolUsuario == 1004) //Director Salud
+            {
+                reportesToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Rol de usuario no reconocido. No se mostrarán opciones.");
+            }
+        }
         private void centroSaludToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCentroSalud frmCentroSalud = new frmCentroSalud();
@@ -44,6 +89,60 @@ namespace ProyectoBDD
         {
             frmAsignacionEnseres frmAsignacionEnseres = new frmAsignacionEnseres();
             frmAsignacionEnseres.ShowDialog();
+        }
+
+        private void cerraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+            this.Close();
+        }
+
+        private void incidenciasDeEquiposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroIncidenciasEquipo frmRegIncEqu = new frmRegistroIncidenciasEquipo();
+            frmRegIncEqu.ShowDialog();
+            
+        }
+
+        private void incidenciasDeEspaciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroIncidencias frmRegistro = new frmRegistroIncidencias();
+            frmRegistro.ShowDialog();         
+        }
+
+        private void verReportesConsultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportes frmReportes = new frmReportes();
+            frmReportes.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void asignacionDePersonasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAsignacionPersonas frmAsignacionPersonas = new frmAsignacionPersonas();
+            frmAsignacionPersonas.ShowDialog();
+        }
+
+        private void mantenimientoSalaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMantenimientoSala frmMantenimientoSala = new frmMantenimientoSala();
+            frmMantenimientoSala.ShowDialog();
+        }
+
+        private void mantenimientoEquipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMantenimientoEquipos frmMantenimientoEquipos = new frmMantenimientoEquipos();
+            frmMantenimientoEquipos.ShowDialog();
+        }
+
+        private void mantenimientosTecnicosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

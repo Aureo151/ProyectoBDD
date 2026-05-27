@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoBDD
 {
-    public partial class FormDigitador : Form
+    public partial class frmReportes : Form
     {
-        public FormDigitador()
+        public frmReportes()
         {
             InitializeComponent();
         }
