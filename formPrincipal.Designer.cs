@@ -40,9 +40,10 @@
             this.equiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignarEnseresYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarIncidenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verAsignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asignarIncidenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarIncidenciasDeEquipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,21 +86,21 @@
             // sedesToolStripMenuItem
             // 
             this.sedesToolStripMenuItem.Name = "sedesToolStripMenuItem";
-            this.sedesToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.sedesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sedesToolStripMenuItem.Text = "Iniciar Sesión";
             this.sedesToolStripMenuItem.Click += new System.EventHandler(this.sedesToolStripMenuItem_Click);
             // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -138,7 +139,8 @@
             // 
             this.asignacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.asignarEnseresYToolStripMenuItem,
-            this.asignarIncidenciasToolStripMenuItem});
+            this.asignarIncidenciasToolStripMenuItem,
+            this.asignarIncidenciasDeEquipoToolStripMenuItem});
             this.asignacionesToolStripMenuItem.Name = "asignacionesToolStripMenuItem";
             this.asignacionesToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
             this.asignacionesToolStripMenuItem.Text = "Asignaciones";
@@ -146,9 +148,16 @@
             // asignarEnseresYToolStripMenuItem
             // 
             this.asignarEnseresYToolStripMenuItem.Name = "asignarEnseresYToolStripMenuItem";
-            this.asignarEnseresYToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.asignarEnseresYToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.asignarEnseresYToolStripMenuItem.Text = "Asignar Enseres a Equipos";
             this.asignarEnseresYToolStripMenuItem.Click += new System.EventHandler(this.asignarEnseresYToolStripMenuItem_Click);
+            // 
+            // asignarIncidenciasToolStripMenuItem
+            // 
+            this.asignarIncidenciasToolStripMenuItem.Name = "asignarIncidenciasToolStripMenuItem";
+            this.asignarIncidenciasToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.asignarIncidenciasToolStripMenuItem.Text = "Asignar Incidencias";
+            this.asignarIncidenciasToolStripMenuItem.Click += new System.EventHandler(this.asignarIncidenciasToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -161,16 +170,16 @@
             // verAsignacionesToolStripMenuItem
             // 
             this.verAsignacionesToolStripMenuItem.Name = "verAsignacionesToolStripMenuItem";
-            this.verAsignacionesToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.verAsignacionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.verAsignacionesToolStripMenuItem.Text = "Ver Asignaciones";
             this.verAsignacionesToolStripMenuItem.Click += new System.EventHandler(this.verAsignacionesToolStripMenuItem_Click);
             // 
-            // asignarIncidenciasToolStripMenuItem
+            // asignarIncidenciasDeEquipoToolStripMenuItem
             // 
-            this.asignarIncidenciasToolStripMenuItem.Name = "asignarIncidenciasToolStripMenuItem";
-            this.asignarIncidenciasToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
-            this.asignarIncidenciasToolStripMenuItem.Text = "Asignar Incidencias";
-            this.asignarIncidenciasToolStripMenuItem.Click += new System.EventHandler(this.asignarIncidenciasToolStripMenuItem_Click);
+            this.asignarIncidenciasDeEquipoToolStripMenuItem.Name = "asignarIncidenciasDeEquipoToolStripMenuItem";
+            this.asignarIncidenciasDeEquipoToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.asignarIncidenciasDeEquipoToolStripMenuItem.Text = "Asignar Incidencias de Equipo";
+            this.asignarIncidenciasDeEquipoToolStripMenuItem.Click += new System.EventHandler(this.asignarIncidenciasDeEquipoToolStripMenuItem_Click);
             // 
             // formPrincipal
             // 
@@ -205,6 +214,7 @@
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verAsignacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignarIncidenciasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignarIncidenciasDeEquipoToolStripMenuItem;
     }
 }
 

@@ -95,5 +95,11 @@ namespace ProyectoBDD
             frmRegistroIncidencias lñ = new frmRegistroIncidencias();
             lñ.ShowDialog();
         }
+
+        private void asignarIncidenciasDeEquipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroIncidenciasEquipo hj = new frmRegistroIncidenciasEquipo();
+            hj.ShowDialog();
+        }
     }
 }

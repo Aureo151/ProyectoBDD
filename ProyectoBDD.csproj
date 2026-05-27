@@ -107,6 +107,12 @@
     <Compile Include="frmRegistroIncidencias.Designer.cs">
       <DependentUpon>frmRegistroIncidencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistroIncidenciasEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroIncidenciasEquipo.Designer.cs">
+      <DependentUpon>frmRegistroIncidenciasEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistroIncidencias.resx">
       <DependentUpon>frmRegistroIncidencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroIncidenciasEquipo.resx">
+      <DependentUpon>frmRegistroIncidenciasEquipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistros.resx">
       <DependentUpon>frmRegistros.cs</DependentUpon>
