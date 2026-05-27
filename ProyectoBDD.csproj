@@ -124,6 +124,9 @@
     <EmbeddedResource Include="FormAdministrador.resx">
       <DependentUpon>FormAdministrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDigitador.resx">
+      <DependentUpon>FormDigitador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formPrincipal.resx">
       <DependentUpon>formPrincipal.cs</DependentUpon>
     </EmbeddedResource>

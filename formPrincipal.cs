@@ -67,27 +67,6 @@ namespace ProyectoBDD
         {
            frmRegistros fg = new frmRegistros();
             fg.ShowDialog();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
         private void asignarIncidenciasToolStripMenuItem_Click(object sender, EventArgs e)
