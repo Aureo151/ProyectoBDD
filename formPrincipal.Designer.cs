@@ -34,6 +34,7 @@
             this.sedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.centrosDeSaludToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.espaciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,9 +42,9 @@
             this.asignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignarEnseresYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignarIncidenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarIncidenciasDeEquipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verAsignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asignarIncidenciasDeEquipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +63,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configuracionToolStripMenuItem});
+            this.configuracionToolStripMenuItem,
+            this.salirToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -100,6 +102,13 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem1
+            // 
+            this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
+            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(52, 24);
+            this.salirToolStripMenuItem1.Text = "Salir";
+            this.salirToolStripMenuItem1.Click += new System.EventHandler(this.salirToolStripMenuItem1_Click);
             // 
             // mantenimientosToolStripMenuItem
             // 
@@ -156,6 +165,13 @@
             this.asignarIncidenciasToolStripMenuItem.Text = "Asignar Incidencias";
             this.asignarIncidenciasToolStripMenuItem.Click += new System.EventHandler(this.asignarIncidenciasToolStripMenuItem_Click);
             // 
+            // asignarIncidenciasDeEquipoToolStripMenuItem
+            // 
+            this.asignarIncidenciasDeEquipoToolStripMenuItem.Name = "asignarIncidenciasDeEquipoToolStripMenuItem";
+            this.asignarIncidenciasDeEquipoToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.asignarIncidenciasDeEquipoToolStripMenuItem.Text = "Asignar Incidencias de Equipo";
+            this.asignarIncidenciasDeEquipoToolStripMenuItem.Click += new System.EventHandler(this.asignarIncidenciasDeEquipoToolStripMenuItem_Click);
+            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -167,21 +183,15 @@
             // verAsignacionesToolStripMenuItem
             // 
             this.verAsignacionesToolStripMenuItem.Name = "verAsignacionesToolStripMenuItem";
-            this.verAsignacionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.verAsignacionesToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.verAsignacionesToolStripMenuItem.Text = "Ver Asignaciones";
             this.verAsignacionesToolStripMenuItem.Click += new System.EventHandler(this.verAsignacionesToolStripMenuItem_Click);
-            // 
-            // asignarIncidenciasDeEquipoToolStripMenuItem
-            // 
-            this.asignarIncidenciasDeEquipoToolStripMenuItem.Name = "asignarIncidenciasDeEquipoToolStripMenuItem";
-            this.asignarIncidenciasDeEquipoToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
-            this.asignarIncidenciasDeEquipoToolStripMenuItem.Text = "Asignar Incidencias de Equipo";
-            this.asignarIncidenciasDeEquipoToolStripMenuItem.Click += new System.EventHandler(this.asignarIncidenciasDeEquipoToolStripMenuItem_Click);
             // 
             // formPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -212,6 +222,7 @@
         private System.Windows.Forms.ToolStripMenuItem verAsignacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignarIncidenciasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignarIncidenciasDeEquipoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
     }
 }
 
