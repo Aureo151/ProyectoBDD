@@ -32,7 +32,7 @@
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbEquipo = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -77,14 +77,15 @@
             this.cmbEquipo.Size = new System.Drawing.Size(121, 24);
             this.cmbEquipo.TabIndex = 32;
             // 
-            // button1
+            // btnAgregar
             // 
-            this.button1.Location = new System.Drawing.Point(254, 395);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 43);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Asignar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregar.Location = new System.Drawing.Point(254, 395);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(81, 43);
+            this.btnAgregar.TabIndex = 31;
+            this.btnAgregar.Text = "Asignar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dataGridView1
             // 
@@ -166,7 +167,7 @@
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbEquipo);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker1);
@@ -187,7 +188,7 @@
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbEquipo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
