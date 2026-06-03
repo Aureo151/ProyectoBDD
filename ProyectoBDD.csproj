@@ -148,6 +148,9 @@
     <EmbeddedResource Include="frmAsignacionEnseres.resx">
       <DependentUpon>frmAsignacionEnseres.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignacionPersonas.resx">
+      <DependentUpon>frmAsignacionPersonas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCentroSalud.resx">
       <DependentUpon>frmCentroSalud.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistros.resx">
       <DependentUpon>frmRegistros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
