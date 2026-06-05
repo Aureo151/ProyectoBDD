@@ -47,8 +47,8 @@ namespace ProyectoBDD
             {
                 using (SqlConnection conn = cn.ObtenerConexion())
                 {
-                    string query = @"SELECT m.id_mantenimient_espacio, e.nombre AS espacio, m.fecha_mantenimiento, m.descripcion 
-                                     FROM MANTENIMIENTO_SALA m
+                    string query = @"SELECT m.id_mantenimiento_espacio, e.nombre AS espacio, m.fecha_mantenimiento, m.descripcion 
+                                     FROM MANTENIMIENTO_ESPACIO  m
                                      INNER JOIN ESPACIO e ON m.id_espacio = e.id_espacio";
                     using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn))
                     {
@@ -92,7 +92,7 @@ namespace ProyectoBDD
             {
                 using(SqlConnection conn = cn.ObtenerConexion())
                 {
-                    string query = @"INSERT INTO MANTENIMIENTO_SALA (id_espacio, fecha, descripcion, responsable, tipo) 
+                    string query = @"INSERT INTO MANTENIMIENTO_ESPACIO  (id_espacio, fecha, descripcion, responsable, tipo) 
                                      VALUES (@id_espacio, @fecha, @descripcion, @responsable, @tipo)";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {

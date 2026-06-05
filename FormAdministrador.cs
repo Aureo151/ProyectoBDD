@@ -144,5 +144,11 @@ namespace ProyectoBDD
         {
 
         }
+
+        private void estadisticasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticas er = new frmEstadisticas();
+            er.ShowDialog();
+        }
     }
 }

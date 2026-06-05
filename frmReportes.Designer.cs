@@ -81,7 +81,7 @@
             // 
             this.button4.Location = new System.Drawing.Point(859, 65);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 65);
+            this.button4.Size = new System.Drawing.Size(113, 73);
             this.button4.TabIndex = 8;
             this.button4.Text = "Mantenimiento de Equipos";
             this.button4.UseVisualStyleBackColor = true;
