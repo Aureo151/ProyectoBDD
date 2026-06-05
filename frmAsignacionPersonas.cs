@@ -16,5 +16,19 @@ namespace ProyectoBDD
         {
             InitializeComponent();
         }
+
+        private void frmAsignacionPersonas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CargarUsuarios()
+        {
+            
+
+            
+            comboBox1.DisplayMember = "NombreUsuario";
+            comboBox1.ValueMember = "IdUsuario";
+        }
     }
 }
