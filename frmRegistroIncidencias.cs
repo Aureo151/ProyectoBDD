@@ -79,8 +79,8 @@ namespace ProyectoBDD
                         if (filas > 0)
                         {
                             MessageBox.Show("Incidencia registrada correctamente.");
+                            CargarIncidencias();
 
-                          
                         }
                         else
                         {

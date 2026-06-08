@@ -47,7 +47,7 @@ namespace ProyectoBDD
             {
                 using (SqlConnection conn = cn.ObtenerConexion())
                 {
-                    string query = @"SELECT m.id_mantenimiento_espacio, e.nombre AS espacio, m.fecha_mantenimiento, m.descripcion 
+                    string query = @"SELECT m.id_mantenimiento_espacio, e.nombre AS espacio, m.fecha, m.descripcion 
                                      FROM MANTENIMIENTO_ESPACIO  m
                                      INNER JOIN ESPACIO e ON m.id_espacio = e.id_espacio";
                     using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn))
@@ -72,6 +72,7 @@ namespace ProyectoBDD
         private void frmMantenimientoSala_Load(object sender, EventArgs e)
         {
             CargarEspacios();
+            CargarMantenimientos();
             Estilos.AplicarEstilo(this);
 
         }

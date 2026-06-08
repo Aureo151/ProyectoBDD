@@ -102,7 +102,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(254, 386);
+            this.btnAgregar.Location = new System.Drawing.Point(147, 395);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(81, 43);
             this.btnAgregar.TabIndex = 45;

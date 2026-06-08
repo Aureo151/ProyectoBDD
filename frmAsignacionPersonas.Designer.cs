@@ -49,7 +49,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 38);
+            this.label1.Location = new System.Drawing.Point(31, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 16);
             this.label1.TabIndex = 1;
@@ -58,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 149);
+            this.label2.Location = new System.Drawing.Point(225, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 16);
             this.label2.TabIndex = 2;
@@ -68,14 +68,14 @@
             // 
             this.cmbResponsable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbResponsable.FormattingEnabled = true;
-            this.cmbResponsable.Location = new System.Drawing.Point(34, 195);
+            this.cmbResponsable.Location = new System.Drawing.Point(247, 84);
             this.cmbResponsable.Name = "cmbResponsable";
             this.cmbResponsable.Size = new System.Drawing.Size(121, 24);
             this.cmbResponsable.TabIndex = 6;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(34, 257);
+            this.btnGuardar.Location = new System.Drawing.Point(430, 37);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(124, 56);
             this.btnGuardar.TabIndex = 7;
@@ -86,11 +86,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(219, 157);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 157);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(610, 281);
+            this.dataGridView1.Size = new System.Drawing.Size(795, 281);
             this.dataGridView1.TabIndex = 8;
             // 
             // frmAsignacionPersonas

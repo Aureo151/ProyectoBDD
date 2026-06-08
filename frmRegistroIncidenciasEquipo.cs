@@ -50,9 +50,9 @@ namespace ProyectoBDD
                 {
                    
                     string query = @"INSERT INTO INCIDENCIA_EQUIPO 
-                                 (descripcion, fecha, tipo, id_usuario, id_equipo)
+                                 (descripcion, fecha, tipo, id_equipo)
                                  VALUES 
-                                 (@descripcion, @fecha, @tipo, @id_usuario, @id_equipo)";
+                                 (@descripcion, @fecha, @tipo, @id_equipo)";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -63,7 +63,7 @@ namespace ProyectoBDD
                         cmd.Parameters.Add("@tipo", SqlDbType.VarChar).Value =
                             string.IsNullOrWhiteSpace(textBox1.Text) ? (object)DBNull.Value : textBox1.Text.Trim();
 
-                        cmd.Parameters.Add("@id_usuario", SqlDbType.Int).Value = idUsuarioLogueado;
+                        
 
                         
                         cmd.Parameters.Add("@id_equipo", SqlDbType.VarChar).Value = comboBox1.SelectedValue.ToString();
