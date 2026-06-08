@@ -50,7 +50,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(783, 36);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 59);
+            this.button2.Size = new System.Drawing.Size(216, 95);
             this.button2.TabIndex = 2;
             this.button2.Text = "Registro de incidencias";
             this.button2.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(783, 136);
+            this.button5.Location = new System.Drawing.Point(790, 223);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(136, 59);
+            this.button5.Size = new System.Drawing.Size(209, 119);
             this.button5.TabIndex = 4;
             this.button5.Text = "Registro mantenimientos de Espacios";
             this.button5.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 450);
+            this.ClientSize = new System.Drawing.Size(1192, 450);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);

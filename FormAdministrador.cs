@@ -161,5 +161,10 @@ namespace ProyectoBDD
         {
             Estilos.AplicarEstilo(this);
         }
+
+        private void usuariosRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
