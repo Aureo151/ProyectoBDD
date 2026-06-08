@@ -39,7 +39,7 @@ namespace ProyectoBDD
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 77);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 67);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -48,9 +48,9 @@ namespace ProyectoBDD
             // 
             // btnEspaciosPorCentro
             // 
-            this.btnEspaciosPorCentro.Location = new System.Drawing.Point(883, 77);
+            this.btnEspaciosPorCentro.Location = new System.Drawing.Point(865, 12);
             this.btnEspaciosPorCentro.Name = "btnEspaciosPorCentro";
-            this.btnEspaciosPorCentro.Size = new System.Drawing.Size(248, 55);
+            this.btnEspaciosPorCentro.Size = new System.Drawing.Size(266, 67);
             this.btnEspaciosPorCentro.TabIndex = 1;
             this.btnEspaciosPorCentro.Text = "Espacios por Centro de Salud";
             this.btnEspaciosPorCentro.UseVisualStyleBackColor = true;
@@ -58,9 +58,9 @@ namespace ProyectoBDD
             // 
             // btnEntreFechas
             // 
-            this.btnEntreFechas.Location = new System.Drawing.Point(883, 232);
+            this.btnEntreFechas.Location = new System.Drawing.Point(883, 147);
             this.btnEntreFechas.Name = "btnEntreFechas";
-            this.btnEntreFechas.Size = new System.Drawing.Size(248, 55);
+            this.btnEntreFechas.Size = new System.Drawing.Size(248, 119);
             this.btnEntreFechas.TabIndex = 2;
             this.btnEntreFechas.Text = "Incidencias y Mantenimientos entre Fechas";
             this.btnEntreFechas.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@ namespace ProyectoBDD
             // 
             // btnTopConsultorios
             // 
-            this.btnTopConsultorios.Location = new System.Drawing.Point(883, 307);
+            this.btnTopConsultorios.Location = new System.Drawing.Point(865, 272);
             this.btnTopConsultorios.Name = "btnTopConsultorios";
-            this.btnTopConsultorios.Size = new System.Drawing.Size(248, 55);
+            this.btnTopConsultorios.Size = new System.Drawing.Size(266, 93);
             this.btnTopConsultorios.TabIndex = 3;
             this.btnTopConsultorios.Text = "Top 3 Consultorios por Centro";
             this.btnTopConsultorios.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@ namespace ProyectoBDD
             // 
             this.btnEquiposPorEspacio.Location = new System.Drawing.Point(883, 429);
             this.btnEquiposPorEspacio.Name = "btnEquiposPorEspacio";
-            this.btnEquiposPorEspacio.Size = new System.Drawing.Size(248, 55);
+            this.btnEquiposPorEspacio.Size = new System.Drawing.Size(248, 83);
             this.btnEquiposPorEspacio.TabIndex = 4;
             this.btnEquiposPorEspacio.Text = "Equipos / Enseres del Espacio";
             this.btnEquiposPorEspacio.UseVisualStyleBackColor = true;
@@ -88,9 +88,9 @@ namespace ProyectoBDD
             // 
             // btnBuscarEquipo
             // 
-            this.btnBuscarEquipo.Location = new System.Drawing.Point(883, 599);
+            this.btnBuscarEquipo.Location = new System.Drawing.Point(825, 599);
             this.btnBuscarEquipo.Name = "btnBuscarEquipo";
-            this.btnBuscarEquipo.Size = new System.Drawing.Size(248, 55);
+            this.btnBuscarEquipo.Size = new System.Drawing.Size(306, 55);
             this.btnBuscarEquipo.TabIndex = 5;
             this.btnBuscarEquipo.Text = "Buscar Equipo por Código o Serie";
             this.btnBuscarEquipo.UseVisualStyleBackColor = true;
@@ -99,7 +99,7 @@ namespace ProyectoBDD
             // dtpInicio
             // 
             this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpInicio.Location = new System.Drawing.Point(883, 169);
+            this.dtpInicio.Location = new System.Drawing.Point(883, 119);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(116, 22);
             this.dtpInicio.TabIndex = 6;
@@ -107,7 +107,7 @@ namespace ProyectoBDD
             // dtpFin
             // 
             this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFin.Location = new System.Drawing.Point(1015, 169);
+            this.dtpFin.Location = new System.Drawing.Point(1015, 119);
             this.dtpFin.Name = "dtpFin";
             this.dtpFin.Size = new System.Drawing.Size(116, 22);
             this.dtpFin.TabIndex = 7;
@@ -115,18 +115,18 @@ namespace ProyectoBDD
             // lblInicio
             // 
             this.lblInicio.AutoSize = true;
-            this.lblInicio.Location = new System.Drawing.Point(880, 146);
+            this.lblInicio.Location = new System.Drawing.Point(880, 96);
             this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(82, 16);
+            this.lblInicio.Size = new System.Drawing.Size(79, 16);
             this.lblInicio.TabIndex = 8;
             this.lblInicio.Text = "Fecha inicio";
             // 
             // lblFin
             // 
             this.lblFin.AutoSize = true;
-            this.lblFin.Location = new System.Drawing.Point(1012, 146);
+            this.lblFin.Location = new System.Drawing.Point(1012, 96);
             this.lblFin.Name = "lblFin";
-            this.lblFin.Size = new System.Drawing.Size(62, 16);
+            this.lblFin.Size = new System.Drawing.Size(61, 16);
             this.lblFin.TabIndex = 9;
             this.lblFin.Text = "Fecha fin";
             // 
@@ -135,7 +135,7 @@ namespace ProyectoBDD
             this.lblCodigoEspacio.AutoSize = true;
             this.lblCodigoEspacio.Location = new System.Drawing.Point(880, 382);
             this.lblCodigoEspacio.Name = "lblCodigoEspacio";
-            this.lblCodigoEspacio.Size = new System.Drawing.Size(204, 16);
+            this.lblCodigoEspacio.Size = new System.Drawing.Size(203, 16);
             this.lblCodigoEspacio.TabIndex = 10;
             this.lblCodigoEspacio.Text = "Código / ID del espacio a revisar";
             // 
@@ -151,7 +151,7 @@ namespace ProyectoBDD
             this.lblBuscarEquipo.AutoSize = true;
             this.lblBuscarEquipo.Location = new System.Drawing.Point(880, 524);
             this.lblBuscarEquipo.Name = "lblBuscarEquipo";
-            this.lblBuscarEquipo.Size = new System.Drawing.Size(236, 16);
+            this.lblBuscarEquipo.Size = new System.Drawing.Size(242, 16);
             this.lblBuscarEquipo.TabIndex = 12;
             this.lblBuscarEquipo.Text = "Código de inventario o número de serie";
             // 
@@ -168,7 +168,7 @@ namespace ProyectoBDD
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(19, 24);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(214, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(265, 29);
             this.lblTitulo.TabIndex = 14;
             this.lblTitulo.Text = "Reportes del Sistema";
             // 
@@ -177,7 +177,7 @@ namespace ProyectoBDD
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(21, 540);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(147, 16);
+            this.lblTotal.Size = new System.Drawing.Size(156, 16);
             this.lblTotal.TabIndex = 15;
             this.lblTotal.Text = "Registros encontrados: 0";
             // 
@@ -209,6 +209,7 @@ namespace ProyectoBDD
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

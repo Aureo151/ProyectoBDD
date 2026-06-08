@@ -49,7 +49,7 @@ namespace ProyectoBDD
             }
         }
 
-        // 1. Listado por centro de salud: número de espacios agrupados por categorías.
+ 
         private void btnEspaciosPorCentro_Click(object sender, EventArgs e)
         {
             string consulta = @"
@@ -66,7 +66,7 @@ namespace ProyectoBDD
             EjecutarReporte(consulta);
         }
 
-        // 2. Listado entre dos fechas: incidencias y mantenimientos registrados.
+       
         private void btnEntreFechas_Click(object sender, EventArgs e)
         {
             DateTime fechaInicio = dtpInicio.Value.Date;
@@ -150,38 +150,61 @@ namespace ProyectoBDD
                 new SqlParameter("@fin", SqlDbType.Date) { Value = fechaFin });
         }
 
-        // 3. Listado de los 3 consultorios mejor equipados por cada centro de salud.
+       
         private void btnTopConsultorios_Click(object sender, EventArgs e)
         {
-            string consulta = @"
-                SELECT
-                    [Centro de Salud],
-                    [Consultorio],
-                    [Cantidad de Equipos]
+            try
+            {
+                using (SqlConnection conn = cn.ObtenerConexion())
+                {
+                    string query = @"
+                SELECT 
+                    CentroSalud,
+                    id_espacio,
+                    Espacio,
+                    Categoria,
+                    CantidadEquipos
                 FROM
                 (
-                    SELECT
-                        CS.nombre AS [Centro de Salud],
-                        ES.nombre AS [Consultorio],
-                        COUNT(EQ.id_equipo) AS [Cantidad de Equipos],
-                        ROW_NUMBER() OVER
-                        (
-                            PARTITION BY CS.id_centro
-                            ORDER BY COUNT(EQ.id_equipo) DESC, ES.nombre
-                        ) AS Numero
+                    SELECT 
+                        CS.nombre AS CentroSalud,
+                        ES.id_espacio,
+                        ES.nombre AS Espacio,
+                        ES.tipo AS Categoria,
+                        COUNT(EQ.id_equipo) AS CantidadEquipos,
+                        ROW_NUMBER() OVER (
+                            PARTITION BY CS.id_centro 
+                            ORDER BY COUNT(EQ.id_equipo) DESC
+                        ) AS Posicion
                     FROM CENTRO_SALUD CS
-                    INNER JOIN ESPACIO ES ON CS.id_centro = ES.id_centro
-                    LEFT JOIN EQUIPO EQ ON ES.id_espacio = EQ.id_espacio
-                    WHERE ES.tipo = 'Consultorio'
-                    GROUP BY CS.id_centro, CS.nombre, ES.id_espacio, ES.nombre
-                ) X
-                WHERE Numero <= 3
-                ORDER BY [Centro de Salud], [Cantidad de Equipos] DESC, [Consultorio]";
+                    INNER JOIN ESPACIO ES 
+                        ON CS.id_centro = ES.id_centro
+                    LEFT JOIN EQUIPO EQ 
+                        ON ES.id_espacio = EQ.id_espacio
+                    GROUP BY 
+                        CS.id_centro,
+                        CS.nombre,
+                        ES.id_espacio,
+                        ES.nombre,
+                        ES.tipo
+                ) AS Reporte
+                WHERE Posicion <= 3
+                ORDER BY CentroSalud, CantidadEquipos DESC;
+            ";
 
-            EjecutarReporte(consulta);
+                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    dataGridView1.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar el reporte de espacios mejor equipados: " + ex.Message);
+            }
         }
 
-        // 4. Al ingresar el código/id del consultorio, laboratorio o sala, mostrar todos sus equipos/enseres.
         private void btnEquiposPorEspacio_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtCodigoEspacio.Text))
