@@ -58,6 +58,7 @@ namespace ProyectoBDD
         {
             CargarEquipos();
             CargarMantenimientos();
+            Estilos.AplicarEstilo(this);
         }
         private void LimpiarCampos()
         {

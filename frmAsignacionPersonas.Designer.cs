@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbEspacio = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.cmbResponsable = new System.Windows.Forms.ComboBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmbEspacio
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(34, 84);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 0;
+            this.cmbEspacio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEspacio.FormattingEnabled = true;
+            this.cmbEspacio.Location = new System.Drawing.Point(34, 84);
+            this.cmbEspacio.Name = "cmbEspacio";
+            this.cmbEspacio.Size = new System.Drawing.Size(121, 24);
+            this.cmbEspacio.TabIndex = 0;
             // 
             // label1
             // 
@@ -62,43 +64,50 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre del Responsable";
             // 
-            // textBox1
+            // cmbResponsable
             // 
-            this.textBox1.Location = new System.Drawing.Point(34, 193);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 3;
+            this.cmbResponsable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbResponsable.FormattingEnabled = true;
+            this.cmbResponsable.Location = new System.Drawing.Point(34, 195);
+            this.cmbResponsable.Name = "cmbResponsable";
+            this.cmbResponsable.Size = new System.Drawing.Size(121, 24);
+            this.cmbResponsable.TabIndex = 6;
             // 
-            // dateTimePicker1
+            // btnGuardar
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(34, 308);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 4;
+            this.btnGuardar.Location = new System.Drawing.Point(34, 257);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(124, 56);
+            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Text = "Asignar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // label3
+            // dataGridView1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 262);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Fecha de Asignacion";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(219, 157);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(610, 281);
+            this.dataGridView1.TabIndex = 8;
             // 
             // frmAsignacionPersonas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 450);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.cmbResponsable);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbEspacio);
             this.Name = "frmAsignacionPersonas";
             this.Text = "frmAsignacionPersonas";
             this.Load += new System.EventHandler(this.frmAsignacionPersonas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,11 +115,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbEspacio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbResponsable;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

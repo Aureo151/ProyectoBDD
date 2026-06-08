@@ -99,6 +99,7 @@ namespace ProyectoBDD
         {
             CargarEspacios();
             CargarIncidencias();
+            Estilos.AplicarEstilo(this);
         }
 
         private void CargarEspacios()

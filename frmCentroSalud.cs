@@ -28,6 +28,7 @@ namespace ProyectoBDD
         private void frmCentroSalud_Load(object sender, EventArgs e)
         {
             mostrarCentros();
+            Estilos.AplicarEstilo(this);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

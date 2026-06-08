@@ -75,6 +75,7 @@ namespace ProyectoBDD
             cargarCentrosSalud();
             mostrarEspacios();
             cmbTipo.SelectedIndex = 0;
+            Estilos.AplicarEstilo(this);
         }
         private void LimpiarCampos()
         {

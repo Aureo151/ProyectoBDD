@@ -58,5 +58,10 @@ namespace ProyectoBDD
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void frmReportes_Load(object sender, EventArgs e)
+        {
+            Estilos.AplicarEstilo(this);
+        }
     }
 }

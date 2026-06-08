@@ -23,7 +23,7 @@ namespace ProyectoBDD
 
         private void frmEstadisticas_Load(object sender, EventArgs e)
         {
-
+            Estilos.AplicarEstilo(this);
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -79,5 +79,10 @@ namespace ProyectoBDD
                 dt.Clear();
             }
         }
+
+        private void frmRegistros_Load(object sender, EventArgs e)
+        {
+            Estilos.AplicarEstilo(this);
+        }
     }
 }

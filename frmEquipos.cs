@@ -134,6 +134,7 @@ namespace ProyectoBDD
         private void frmEquipos_Load(object sender, EventArgs e)
         {
             mostrarEquipos();
+            Estilos.AplicarEstilo(this);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

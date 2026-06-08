@@ -86,5 +86,10 @@ namespace ProyectoBDD
         {
             this.Close();
         }
+
+        private void formPrincipal_Load(object sender, EventArgs e)
+        {
+            Estilos.AplicarEstilo(this);
+        }
     }
 }

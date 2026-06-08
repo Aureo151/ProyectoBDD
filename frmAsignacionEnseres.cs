@@ -46,6 +46,7 @@ namespace ProyectoBDD
         private void frmAsignacionEnseres_Load(object sender, EventArgs e)
         {
             CargarEspacios();
+            Estilos.AplicarEstilo(this);
 
         }
 

@@ -150,5 +150,16 @@ namespace ProyectoBDD
             frmEstadisticas er = new frmEstadisticas();
             er.ShowDialog();
         }
+
+        private void responsablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmResponsable frmResponsable = new frmResponsable();
+            frmResponsable.ShowDialog();
+        }
+
+        private void FormAdministrador_Load(object sender, EventArgs e)
+        {
+            Estilos.AplicarEstilo(this);
+        }
     }
 }

@@ -72,7 +72,8 @@ namespace ProyectoBDD
         private void frmMantenimientoSala_Load(object sender, EventArgs e)
         {
             CargarEspacios();
-           
+            Estilos.AplicarEstilo(this);
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
