@@ -30,14 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCodigoEquipo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
@@ -66,19 +64,10 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 184);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tipo Equipo";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 284);
+            this.label4.Location = new System.Drawing.Point(29, 197);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 16);
             this.label4.TabIndex = 3;
@@ -87,7 +76,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 372);
+            this.label5.Location = new System.Drawing.Point(29, 285);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 16);
             this.label5.TabIndex = 4;
@@ -96,7 +85,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(172, 301);
+            this.label6.Location = new System.Drawing.Point(176, 214);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 16);
             this.label6.TabIndex = 5;
@@ -105,7 +94,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(176, 375);
+            this.label7.Location = new System.Drawing.Point(180, 288);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 16);
             this.label7.TabIndex = 6;
@@ -126,38 +115,30 @@
             this.txtNombre.Size = new System.Drawing.Size(100, 22);
             this.txtNombre.TabIndex = 8;
             // 
-            // cmbTipo
-            // 
-            this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(22, 230);
-            this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(121, 24);
-            this.cmbTipo.TabIndex = 9;
-            // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(22, 328);
+            this.txtMarca.Location = new System.Drawing.Point(26, 241);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(100, 22);
             this.txtMarca.TabIndex = 10;
             // 
             // txtModelo
             // 
-            this.txtModelo.Location = new System.Drawing.Point(22, 416);
+            this.txtModelo.Location = new System.Drawing.Point(26, 329);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(100, 22);
             this.txtModelo.TabIndex = 11;
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(179, 338);
+            this.txtNumero.Location = new System.Drawing.Point(183, 251);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 22);
             this.txtNumero.TabIndex = 12;
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(175, 408);
+            this.txtEstado.Location = new System.Drawing.Point(179, 321);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(100, 22);
             this.txtEstado.TabIndex = 13;
@@ -212,14 +193,12 @@
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.txtMarca);
-            this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigoEquipo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmAsignacionEnseres";
@@ -234,14 +213,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCodigoEquipo;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.TextBox txtNumero;
